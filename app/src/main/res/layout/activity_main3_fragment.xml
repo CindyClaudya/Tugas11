@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main3FragmentActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="368dp"
+        android:layout_height="41dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="42dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cindy Claudya" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help!!"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="178dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Layout"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="“Fragment"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="314dp" />
+
+    <TextView
+        android:id="@+id/txtNamaFragment"
+        android:layout_width="144dp"
+        android:layout_height="29dp"
+        android:text="Hallo World"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="414dp" />
+
+    <FrameLayout
+        android:layout_width="386dp"
+        android:layout_height="239dp"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="476dp">
+
+    </FrameLayout>
+
+
+</LinearLayout>

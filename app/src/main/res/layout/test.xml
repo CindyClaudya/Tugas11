@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:background="#aa0000"
             android:gravity="center_horizontal"
             android:text="red" />
@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:background="#00aa00"
             android:gravity="center_horizontal"
             android:text="green" />
@@ -29,7 +29,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:background="#0000aa"
             android:gravity="center_horizontal"
             android:text="blue" />
@@ -77,7 +77,6 @@
             android:text="row four"
             android:textSize="15pt" />
     </LinearLayout>
-    <?xml version="1.0" encoding="utf-8"?>
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -90,5 +89,95 @@
             android:id="@+id/entry"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/editbox_background"         android:layout_below="@id/label"/>     <Button         android:id="@+id/ok"         android:layout_width="wrap_content"         android:layout_height="wrap_content"         android:layout_below="@id/entry"         android:layout_alignParentRight="true"         android:layout_marginLeft="10dip"         android:text="OK"/>     <Button         android:layout_width="wrap_content"         android:layout_height="wrap_content"         android:layout_toLeftOf="@id/ok"         android:layout_alignTop="@id/ok"         android:text="Cancel"/> </RelativeLayout>
+            android:background="@android:drawable/editbox_background"
+            android:layout_below="@id/label"/>
+        <Button         android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/entry"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dip"
+            android:text="OK"/>     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/ok"
+        android:layout_alignTop="@id/ok"
+        android:text="Cancel"/>
+    </RelativeLayout>
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="1">
+        <TextView
+            android:layout_column="1"
+            android:text="Open..."
+            android:padding="3dip" />
+        <TextView
+            android:text="Ctrl-O"
+            android:gravity="right"
+            android:padding="3dip" />
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:text="Save..."
+            android:padding="3dip" />
+        <TextView
+            android:text="Ctrl-S"
+            android:gravity="right"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:text="Save As..."
+            android:padding="3dip" />
+        <TextView
+            android:text="Ctrl-Shift-S"
+            android:gravity="right"
+            android:padding="3dip" />
+    </TableRow>
+
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090" />
+
+    <TableRow>
+        <TextView
+            android:text="X"
+            android:padding="3dip" />
+        <TextView
+            android:text="Import..."
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+    <TextView
+        android:text="X"
+        android:padding="3dip" />
+    <TextView
+        android:text="Export..."
+        android:padding="3dip" />
+    <TextView
+        android:text="Ctrl-E"
+        android:gravity="right"
+        android:padding="3dip" />
+    </TableRow>
+
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090" />
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+
+            android:text="Quit"
+        android:padding="3dip" />
+    </TableRow>
+</TableLayout>
 </LinearLayout>
+

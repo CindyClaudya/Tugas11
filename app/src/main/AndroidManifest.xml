@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Main3FragmentActivity"></activity>
+
         <meta-data
             android:name="com.google.android.actions"
-            android:resource="@xml/Test" />
+            android:resource="" />
 
         <activity android:name=".HelpActivity" />
         <activity android:name=".MainActivity">

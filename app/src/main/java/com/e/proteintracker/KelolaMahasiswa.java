@@ -13,20 +13,18 @@ import android.widget.Toast;
 
 public class KelolaMahasiswa extends AppCompatActivity {
 
-    String[] items={"Riyan Mozes Sahetapy", "Brian Eldrin Sombuk", "Elias Aru F. Langer", "Aditya Halimawan", "Immanuel Harold Maga",
-            "Eben Haezer Gultom", "Yosua Erick Gunawan", "Nana Eka Wulandari", "Eva Kristina", "Jonathan Prajna Marga Parama",
-            "Emma Norren Cahya Putri", "Michael Gerardi Adji", "Cynthia Kumalasari", "Nikolaus Aryawan Ravato Wijaya", "Daniel Surya Nugraha",
-            "Lionrico Sanjay Exauvida Jeipy", "Jonathan Alvin Ananto", "Monica Carista", "Didimus Candra Gased", "Valeriana Tanesha Indra S",
-            "Ivan Bernov", "Friska F. Nainggolan", "Grace Hutabarat", "Beni Mulia Tabarus"};
+    String[] items={"Brayen Chanzezar Saroinsong","Arnold Stanley Rivaldy Tato", "Verina Kristanti Wiyono", "Yubelince Naomi Wakum","Hendry Masiku" ,"Baskoro Adi Wicaksono","Yos Rafel Kristanto","Alfadeo Melody Jeremy Bulin" ,"Yashinta Novita Dewi", "Yalina Hosea", "Adrian Paskalis", "Desta Siwi P", "Cindy Claudya", "Angkie Octovaldo Elias Wangkay", "Christian Dorra" ,"Tita Marita Simangunsong" ,"Angga Dwi Kaharap" ,"Fransiska Ayu Gloria","Mika Havennia Sirait", "Marni Eva Kristina Saragih" ,"Aristyo Rahadian Agung Nugroho","Laurentia Yulia Cristi", "Putu Abdi SetiawanBrayen Chanzezar Saroinsong" ,"Arnold Stanley Rivaldy Tato" ,"Verina Kristanti Wiyono", "Yubelince Naomi Wakum", "Hendry Masiku", "Baskoro Adi Wicaksono", "Yos Rafel Kristanto", "Alfadeo Melody Jeremy Bulin","Yashinta Novita Dewi","Yalina Hosea" ,"Adrian Paskalis" ,"Desta Siwi P", "Cindy Claudya","Angkie Octovaldo Elias Wangkay", "Christian Dorra","Tita Marita Simangunsong", "Angga Dwi Kaharap", "Fransiska Ayu Gloria",
+            "Mika Havennia Sirait", "Marni Eva Kristina Saragih",
+            "Aristyo Rahadian Agung Nugroho", "Laurentia Yulia Cristi","Putu Abdi Setiawan"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kelola_mahasiswa);
 
-        ListView lv = (ListView)findViewById(R.id.lvKelola);
+        ListView lv = (ListView)findViewById(R.id.lvMhs);
         // Spinner spinner = findViewById(R.id.mSpinner);
-        Button btnAdd3 = (Button)findViewById(R.id.btnAdd3);
+        Button btnAdd3 = (Button)findViewById(R.id.btnAddMhs);
         btnAdd3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -35,7 +33,7 @@ public class KelolaMahasiswa extends AppCompatActivity {
             }
         });
 
-        Button btnEdit3 = (Button)findViewById(R.id.btnEdit3);
+        Button btnEdit3 = (Button)findViewById(R.id.btnEditMhs);
         btnEdit3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

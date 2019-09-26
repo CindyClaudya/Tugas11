@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         myBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText myEditText = (EditText) findViewById(R.id.edittext1);
+                EditText myEditText = (EditText) findViewById(R.id.editText1);
                 Log.d("ProteinTracker", myEditText.getText().toString());
 
                 Button helpBtn = (Button) findViewById(R.id.helpButton);
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
             Bundle b = new Bundle();
 
-            EditText myEditText = (EditText) findViewById(R.id.edittext1);
+            EditText myEditText = (EditText) findViewById(R.id.editText1);
 
             b.putString("helpString", myEditText.getText().toString());
 

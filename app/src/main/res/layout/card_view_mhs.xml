@@ -7,6 +7,12 @@
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true">
 
+    <ImageView
+        android:id="@+id/img8"
+        android:layout_width="84dp"
+        android:layout_height="56dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,25 +21,62 @@
             android:id="@+id/txtNim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
             android:text="TextView"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="28dp"
-            tools:text="NIM" />
+            tools:layout_editor_absoluteX="0dp"
+            tools:text="NIM  :" />
+
 
         <TextView
             android:id="@+id/txtNama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nama"
-            app:layout_constraintTop_toBottomOf="@+id/txtNoHp"
-            tools:layout_editor_absoluteX="128dp" />
+            app:layout_constraintTop_toBottomOf="@+id/txtNim"
+            tools:layout_editor_absoluteX="16dp"
+            tools:text="Nama :" />
 
         <TextView
-            android:id="@+id/txtNoHp"
+            android:id="@+id/txtGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No Hp"
+            android:layout_marginTop="20dp"
+            android:text="Gender"
             app:layout_constraintTop_toBottomOf="@+id/txtNim"
-            tools:layout_editor_absoluteX="54dp" />
+            tools:layout_editor_absoluteX="0dp"
+            tools:text="Gender :" />
+
+        <TextView
+            android:id="@+id/txtHobby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Hobby :"
+            app:layout_constraintTop_toBottomOf="@+id/txtNim"
+            tools:layout_editor_absoluteX="0dp"
+            tools:text="Hobby :" />
+
+        <TextView
+            android:id="@+id/txtCita-Cita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="Cita-Cita"
+            app:layout_constraintTop_toBottomOf="@+id/txtNim"
+            tools:layout_editor_absoluteX="0dp"
+            tools:text="Cita-Cita" />
+
+        <TextView
+            android:id="@+id/txtMotoHidup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:text="Moto"
+            app:layout_constraintTop_toBottomOf="@+id/txtNim"
+            tools:layout_editor_absoluteX="0dp"
+            tools:text="Moto Hidup" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>

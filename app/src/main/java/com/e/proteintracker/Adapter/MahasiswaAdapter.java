@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.e.proteintracker.Model.Mahasiswa;
 import com.e.proteintracker.R;
 
+import java.text.CollationElementIterator;
 import java.util.ArrayList;
 
 public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.ViewHolder>{
@@ -32,9 +33,9 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {   //menghubungkan data, data dari konstruktor .
+        holder.txtNim.setText(mahasiswaArrayList.get(position).getNim());
         holder.txtNama.setText(mahasiswaArrayList.get(position).getNama());
-        holder.txtNim.setText(mahasiswaArrayList.get(position).getNpm());
-        holder.txtNoHp.setText(mahasiswaArrayList.get(position).getNohp());
+        holder.txtGender.setText(mahasiswaArrayList.get(position).getGender());
 
 
     }
@@ -44,15 +45,21 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.View
         return (mahasiswaArrayList !=null)? mahasiswaArrayList.size() :0;   //jika array mhs 0 maka akan kmbli ke ukuran array list awal
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView txtNim, txtNama, txtNoHp, imgx;
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ViewHolder(View view){
+        private TextView txtNim, txtNama, txtGender, txtCita, txtHobby, txtMoto, img;
+
+        public ViewHolder(View view) {
             super(view);
             txtNama = view.findViewById(R.id.txtNama);
             txtNim = view.findViewById(R.id.txtNim);
-            txtNoHp = view.findViewById(R.id.txtNoHp);
+            txtGender = view.findViewById(R.id.txtGender);
+            txtCita = view.findViewById(R.id.txtCita_Cita);
+            txtHobby = view.findViewById(R.id.txtHobby);
+
+
         }
+
 
     }
 }

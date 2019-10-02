@@ -1,6 +1,7 @@
 package com.e.proteintracker;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,12 +16,15 @@ public class RecyclerViewActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MahasiswaAdapter mahasiswaAdapter;
     private ArrayList<Mahasiswa> mahasiswaArrayList;
+    private CardView cardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
+        setContentView(R.layout.card_view_mhs);
         addData();
+        cardView = findViewById(R.id.rvMahasiswa);
         recyclerView = findViewById(R.id.rvMahasiswa);
         mahasiswaAdapter = new MahasiswaAdapter(mahasiswaArrayList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(RecyclerViewActivity.this);
@@ -29,17 +33,16 @@ public class RecyclerViewActivity extends AppCompatActivity {
     }
 
     private void addData() {
-        mahasiswaArrayList.add(new Mahasiswa("Scorpio Milo","1414370309", "123456789" ));
-        mahasiswaArrayList.add(new Mahasiswa("Sagitarius Aiolos","1214234560", "987654321" ));
-        mahasiswaArrayList.add(new Mahasiswa("Libra Dohko","1214230345", "987648765" ));
-        mahasiswaArrayList.add(new Mahasiswa("Aries Mu","1214378098", "098758124" ));
-        mahasiswaArrayList.add(new Mahasiswa("Gemini Saga","1414370309", "123456789" ));
-        mahasiswaArrayList.add(new Mahasiswa("Aquarius Camus","1214234560", "987654321" ));
-        mahasiswaArrayList.add(new Mahasiswa("Cencer Deathmask","1214230345", "987648765" ));
-        mahasiswaArrayList.add(new Mahasiswa("Leo Aiolia","1214378098", "098758124" ));
-        mahasiswaArrayList.add(new Mahasiswa("Virgo Shaka","1414370309", "123456789" ));
-        mahasiswaArrayList.add(new Mahasiswa("Taurus Aldebaran","1214234560", "987654321" ));
-        mahasiswaArrayList.add(new Mahasiswa("Pisces Aphorodite","1214230345", "987648765" ));
-        mahasiswaArrayList.add(new Mahasiswa("Capricorn Shura","1214378098", "098758124" ));
+        mahasiswaArrayList.add(new Mahasiswa("72170112", "Yalina Hosea", "Perempuan",
+                "Menghabiskan Uang", "Sosialita", "Kemewahan adalah Saya" ));
+        mahasiswaArrayList.add(new Mahasiswa("72170155", "Angga Dwi", "Laki",
+                "multimedia", "hacker", "Diam Tapi Betindak"));
+
+        mahasiswaArrayList.add(new Mahasiswa("72170160", "Mika Havennia Sirait", "Perempuan",
+                "Main alat musik", "Selebgram", "Never Give Up"));
+        mahasiswaArrayList.add(new Mahasiswa("72170166", "Marni Eva Saragih", "Perempuan",
+                "Jualan USDA di setiap event kepanitiaan", "Penjual Obat Penumbuh, Pembesar, Pelangsing dan Perapet"
+       , "Jualan is my Fashion"));
+
     }
 }

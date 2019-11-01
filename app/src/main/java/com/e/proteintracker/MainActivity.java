@@ -7,10 +7,13 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,8 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 Button helpBtn = (Button) findViewById(R.id.helpButton);
                 helpBtn.setOnClickListener(helpButtonListener);
 
-                if(savedInstanceState != null){
-                    Log.d("ProteinTracker",savedInstanceState.getString("abc")); }
+                if (savedInstanceState != null) {
+                    Log.d("ProteinTracker", savedInstanceState.getString("abc"));
+                }
             }
         });
     }
@@ -45,17 +49,20 @@ public class MainActivity extends AppCompatActivity {
 
             Intent intent = new Intent(MainActivity.this, HelpActivity.class);
 
-             startActivity(intent);
+            startActivity(intent);
         }
 
     };
 
-    @Override protected void onSaveInstanceState(Bundle outState) {
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        outState.putString("abc","test");
+        outState.putString("abc", "test");
         super.onSaveInstanceState(outState);
-    };
+    }
+
+    ;
 
     private View.OnClickListener getHelpButtonListener = new View.OnClickListener() {
 
@@ -73,5 +80,28 @@ public class MainActivity extends AppCompatActivity {
 
             startActivity(intent);
         }
-    }; }
+    };
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.optionmenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.item1:
+                Toast.makeText(getApplicationContext(), "Item 1 Terpilih", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.item2:
+                Toast.makeText(getApplicationContext(), "Item 2 Terpilih", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.item3:
+                Toast.makeText(getApplicationContext(), "Item 3 Terpilih", Toast.LENGTH_LONG).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+}
